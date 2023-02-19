@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATE IN JAVASCRIPT</title>
+</head>
+<body>
+    <div class="container">
+        Hello
+    </div>
+
+    <script>
+        let date1 = new Date();         // Date() is a contructor, which returns a object. Here it returns the current date.
+        console.log(date1);
+        
+        let date2 = new Date(1000);     // If we provide any number as argument to the Date() function, then it takes it as miliseconds & returns the Date after that time from the reference Date [i.e Thu Jan 01 1970 05:30:00 GMT+0530 (India Standard Time)]
+        console.log(date2);
+
+        let date3 = new Date("2023-03-24");     // We can also give a Date as argument & it will return it in its own object format.
+        console.log(date3);
+
+        let date4 = new Date(2046, 0, 5, 3, 45, 55);        // We can also give values of [Year, Month, Day, Hour, Miute, Second] as parameter to the Date function. Here the value of Month starts from 0, i.e Jan is 0th month & Dec. is 11th month
+        console.log(date4);
+
+
+        // We can get the year, month, day, hours, minutes, seconds from a Date object with these methods :-
+
+        let year = date4.getFullYear();
+        console.log(year);
+
+        let dt = date4.getDate()
+        console.log(dt);
+        
+        let mon = date4.getMonth()
+        console.log(mon);
+        
+
+        console.log(Date.now());            // Datee.now() returns us the no. of miliseconds that have elpased from reference date till now.
+
+        // We can modify a Date object with the help  of set functions :-
+
+        date4.setDate(2);
+        console.log(date4);
+        
+        date4.setMonth(6);
+        console.log(date4);
+        
+        date4.setFullYear(2024);
+        console.log(date4);
+        
+        date4.setMinutes(20);
+        console.log(date4);
+        
+        date4.setHours(8);
+        console.log(date4);
+        
+    </script>
+</body>
+</html>
