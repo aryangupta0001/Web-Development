@@ -13,7 +13,7 @@ function sum(arr){
 // module.exports = sum;                                // exporting only one function.
 
 module.exports = {                                      // exporting multiple things, so we need to make a object here.
-    sum,
+    "sum" : sum,
     "name" : "Sum",
     "editor" : "Aryan",
     "Type" : "Function"
