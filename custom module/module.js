@@ -18,3 +18,5 @@ module.exports = {                                      // exporting multiple th
     "editor" : "Aryan",
     "Type" : "Function"
 };
+
+module.exports.repo = "Github";                         // We can export any key-value pairs seperately also. This is will be imported along with the object
