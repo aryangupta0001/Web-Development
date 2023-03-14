@@ -57,7 +57,7 @@ const server = http.createServer((req, res) => {
           }
   
           .navbar{
-              height: 15vh;
+              height: 20vh;
   
               display: flex;
               justify-content: space-evenly;
