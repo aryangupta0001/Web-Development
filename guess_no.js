@@ -19,7 +19,7 @@ while(ch>0){
         console.log("\n Wrong guess\n You guessed a smaller no.\n\n");
     else if (b==a){
         console.log(b);
-        console.log(" Hurrrah You guessed the right no.\n your score is", ch);
+        console.log(" Hurrrah !!! You guessed the right no.\n your score is", ch);
         break;
     }
     ch--;
