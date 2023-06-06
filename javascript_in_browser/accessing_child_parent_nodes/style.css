@@ -1,0 +1,12 @@
+html, body{
+    height: 100;
+    width: 100;
+}
+
+ul{
+    display: flex;      /*This will change the display style of all the <ul> tags */
+}
+
+li{
+    list-style: none;       /* This will change the list-style of alll the <li> tags*/
+}
