@@ -88,13 +88,6 @@ console.log(" Next element sibling of <div> is :-", b[1].nextElementSibling);
 console.log(" Previous element sibling of <p> is :-", b[3].previousElementSibling);
 
 
-
-
-
-
-
-
-
 /* Changing style properties of HTML documents using Javascript :-*/
 
 const changebg = ()=>{
