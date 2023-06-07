@@ -1,9 +1,9 @@
 /*
-// for loop in Javascript is same as for loop in C++
+for loop in Javascript is same as for loop in C++
 
-// for(let i=0; i<=100; i++)
-// {   console.log(i);
-// }
+for(let i=0; i<=100; i++)
+{   console.log(i);
+}
 */
 
 
@@ -27,7 +27,7 @@ for (let i in "ARYAN")
 */
 
 
-// /*
+/*
 // for-of loop is used to access the iterables
 
 let a = ["A", "R", "Y", "A", "N"];
@@ -35,4 +35,4 @@ for(let i of a)
 {   console.log(i);
 }
 
-// */
+*/

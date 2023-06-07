@@ -12,7 +12,7 @@ let arr1 = arr.filter((a) =>{
         return 1;       // If we return [true] in any form (1, true, -1, -2, .....) then it will add that element into the new array.
     
     else
-        return undefined;   // If we return [false] in any form (0, false, undefined) then it will add that element into the new array.
+        return undefined;   // If we return [false] in any form (0, false, undefined) then it will not add that element into the new array.
 })
 
 console.log(arr1);
