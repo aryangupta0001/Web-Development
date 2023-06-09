@@ -41,7 +41,7 @@ button1.style.backgroundColor = "black";
 
 /* 4 -->
     .querySelector() method :-
-    This method searches thhe elements with the help of CSS Query selectors and returns the first element.
+    This method searches the elements with the help of CSS Query selectors and returns the first element.
 
     It is same like --> document.querySelectorAll(CSS Selector)[0];
 */
@@ -52,7 +52,42 @@ let button = document.querySelector(".btn");                             // It s
 button.style.backgroundColor = "orange";
 
 
+/* 5 -->
+    .getElementsByTagName() method :-
+    This method searches the element with the tag name & returns all the eleement.
+*/
 
+let tags = document.getElementsByTagName("div");
+console.log(tags);
+
+
+
+/* 6 -->
+    
+*/
+
+let name = document.getElementsByName("name")[0];
+name.value = "Aryan";
+
+let phone = document.getElementsByName("phone")[0];
+phone.value = "XXXXXXXXXX";
+
+let address = document.getElementsByName("address")[0];
+address.value = "BAERILLY";
+
+
+
+
+
+
+
+
+
+
+// We can use multiple searching methods with each other for more specified searches.
+
+let para = document.querySelectorAll(".card-body")[1].getElementsByTagName("p")[0];
+para.innerHTML = "Hello";
 
 
 
