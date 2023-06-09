@@ -1,15 +1,17 @@
-/*
-for loop in Javascript is same as for loop in C++
+// for loop in Javascript is same as for loop in C++
 
-for(let i=0; i<=100; i++)
+// There are 3 types of for loops in Javascript :-
+
+// 1) for loop -->                  It is a normal for loop, just like C++
+
+for(let i=0; i<=100; i++)               
 {   console.log(i);
 }
-*/
 
 
 
-/*
-// for-in loop is used to access keys of any key-values pairs (like objects) or of any iterables (like Strings)
+
+// 2) for-in loop -->               It is used to access keys of any key-values pairs (like objects) or of any iterables (like Strings)
 
 let a = {   name : "Aryan",
             grad : "bca",
@@ -24,15 +26,17 @@ for (let i in a)
 for (let i in "ARYAN")
 {   console.log(i);             // This will print the value of i, i.e the index of every character of string "ARYAN"
 }
-*/
 
 
-/*
-// for-of loop is used to access the iterables
 
-let a = ["A", "R", "Y", "A", "N"];
-for(let i of a)
+// 3) for-of loop -->           It is used to access the value of the iterables
+
+let b = ["A", "R", "Y", "A", "N"];
+for(let i of b)
 {   console.log(i);
 }
 
-*/
+for (let i of "ARYAN")
+{
+    console.log(i);
+}
