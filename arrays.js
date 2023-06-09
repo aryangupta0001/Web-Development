@@ -154,7 +154,7 @@ console.log(concat_arr);
 
 
 // sort function :-
-// sort function sorts the array alphabetically, even if it contains integer, then also it will be sorted alphabetically.
+// .sort function sorts the array alphabetically, even if it contains integer, then also it will be sorted alphabetically.
 
 let arr_char = ["A", "Z", "RANBEER", "ARYAN"];
 console.log(arr_char.sort());
@@ -164,14 +164,31 @@ console.log(arr_num.sort());
 
 
 
+
+// The above .sort function cannot beused for sorting the numerical values, so we use addittional function, which compares the values to soort them.
+
 // to sort integers, [sort] function takes an addittional function [compare] as its arguement
 // Then it sorts the array on the basis of this compare function.
+
+// if the compare function returns a (-)ve value, [a] is sorted before [b]
+// if the compare function returns a (+)ve value, [b]] is sorted before [a]
+// if the compare function returns 0, no sorting is done
+
 
 let compare = (a, b) => {
     return a - b;
 }
 
 console.log(arr_num.sort(compare));
+
+console.log(arr_num);
+
+// To sort in decreasing order, just change [a-b] to [b-a].
+
+
+
+
+
 
 
 
