@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Attributed & Their Methods</title>
+</head>
+<body>
+    <div id="div1 " class="div">
+        Hey !!! I am a Container
+    </div>
+
+    <div id="div2">
+        Hey !!! I am second Container
+    </div>
+
+
+    <div class="custom-attributes" id="div3" data-name = "Aryan", data-age = "22">
+        <br>
+        Hey !!! I am also a container.<br>
+        There is something special about me, I have been defined with custom-attributes.<br>
+        
+        Custom-attributes can be easily ddefined, but if in future, Javascript its new attributes of same name, thenn there will be a problem. <br>
+        So, to reserve the custom-attributes for the programmers, Javascript lets us to define custom-attributes as <b> data-attribute_name </b>. <br>
+        These type of custom-attributes are available in a property named <b> data-set </b>.
+    </div>
+
+    <script>
+        let div1 = document.getElementsByTagName("div")[0];
+
+        let value = div1.getAttribute("id");                 // .getAttribute method returns the value of attribute provided to it as argument
+        console.log(value);
+
+        value = div1.getAttribute("class");
+        console.log(value);
+
+        let div2 = document.getElementsByTagName("div")[1]
+
+        value = div2.hasAttribute("id");                     // .hasAttribute method checks whether the specific attribute (provided to it as argument) exists for a element or not. It returns true or false.
+        console.log(value);
+        
+        value = div2.hasAttribute("class");
+        console.log(value);
+
+        div1.setAttribute("class", "box");                  // .setAttribute sets the value of a attribute of an element.
+        div2.setAttribute("hidden", "true");
+
+        div1.removeAttribute("id");                         // .removeAttributes method removes the attribute provided to it as argument.
+        div2.removeAttribute("class");
+
+        console.log(div1.attributes);                       // .attributes returns a object of all the attributes of a function.
+        console.log(div2.attributes);
+
+
+    </script>
+</body>
+</html>
