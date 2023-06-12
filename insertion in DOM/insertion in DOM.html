@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserion in DOM</title>
+</head>
+<body>
+    <div id="div1" class="box" style="border: 1px solid black;">
+        <h1>
+            Hey I am a container
+        </h1>
+    </div>
+
+    <script>
+        let target = document.body.getElementsByTagName("div")[0];
+
+
+        // Their are several ways to insert elements in DOM :-
+
+
+        /* 1. changing the innerHTML of a element :-
+            In this method, we simply manipulate the existing HTML code of an element & add new tags & elements to it.
+        */
+        
+        target.innerHTML = target.innerHTML + "<b> Hello !!! I'm inserted by manipulating the innerHTML </b>"; 
+        console.log(target.innerHTML);
+        
+        /* 2. .append() method :-
+        This method appends an element into an existing element's children, i.e the new element is placed at the last position of its children.
+        */
+
+        let div1 = document.createElement("div");
+        div1.innerHTML = "Hello !!! I'm inserted with append()";
+
+        target.append(div1);
+
+        
+        /* 3. .prepend() method :-
+        This method prepends an element into an existing element's children, i.e the new element is placed at the first position of its children.
+        */
+
+        let div2 = document.createElement("div");
+        div2.innerHTML = "Hello !!! I'm inserted with prepend()";
+
+        target.prepend(div2);
+
+
+        /* 4. .before() method :-
+        This method place the element before another element.
+        */
+
+        let div3 = document.createElement("div");
+        div3.innerHTML = "Hello !!! I'm inserted with before()";
+
+        target.before(div3);
+        
+
+        /* 5. .after() method :-
+        This method place the element after another element.
+        */
+
+        let div4 = document.createElement("div");
+        div4.innerHTML = "Hello !!! I'm inserted with after()";
+
+        target.after(div4);
+
+
+        /* 6. .replace() method :-
+        This method replaces an element with another element.
+        */
+
+        let div5 = document.createElement("div");
+        // div5.innerHTML = "Hello !!! I replaced the target element";
+
+        target.replaceWith(div5);
+
+
+    </script>
+</body>
+</html>
