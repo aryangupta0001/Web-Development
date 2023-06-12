@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Adjaceent Element</title>
+</head>
+<body>
+    <div id="div1" style="border: 1px solid black;">
+        <h1>
+            Hello I'm a container
+        </h1>
+    </div>
+
+
+
+
+    <script>
+        let target = document.getElementById("div1");
+        console.log(target);
+
+
+        // insertAdjacentElement(); method is used to insert elements adjacent to another elements in the DOM. There are 4 positions to insert adjacent elements, provided to it as arguments :-
+
+
+
+        /*  1. beforebegin :-
+                beforebegin inserts the element just before the beginning of target element.
+        */
+        let div1 = document.createElement("div");
+        div1.innerHTML = "<b> Hey ! I'm inserted before begin </b>";
+        target.insertAdjacentElement("beforebegin", div1);
+
+
+        /*  2. beforeend :-
+                beforeend inserts the element just before the end of target element.
+        */
+        let div2 = document.createElement("div");
+        div2.innerHTML = "<b> Hey ! I'm inserted before end </b>";
+        target.insertAdjacentElement("beforeend", div2);
+
+
+        /*  3. afterbegin :-
+                after inserts the element just after the begining of target element.
+        */
+        let div3 = document.createElement("div");
+        div3.innerHTML = "<b> Hey ! I'm inserted after begin </b>";
+        target.insertAdjacentElement("afterbegin", div3);
+
+
+        /*  3. afterend :-
+                after inserts the element just after the end of target element.
+        */  
+        let div4 = document.createElement("div");
+        div4.innerHTML = "<b> Hey ! I'm inserted after end </b>";
+        target.insertAdjacentElement("afterend", div4);
+
+    </script>
+</body>
+</html>
