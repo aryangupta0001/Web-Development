@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>className and classList</title>
+
+    <style>
+        .yellow{
+            background-color: yellow;
+        }
+
+        .red{
+            background-color: red;
+        }
+
+        .text-dark{
+            color: black;
+        }
+
+        .text-lighten{
+            color: white;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="yellow" id="div1">
+        <h1>
+            Hello EveryOne
+        </h1>
+    </div>
+
+    <script>
+        let target = document.getElementById("div1");
+
+        
+        // We can change the existing classes of an element with .className property.
+
+        target.className = "red text-lighten";
+
+
+        // To view the classes of en element, we use .classList function.
+
+        console.log(target.classList);
+
+
+        // To remove a class from an element, we use .classList.remove("classname"); function.
+
+        target.classList.remove("red");
+
+
+        // To add a class to an element, we use .classList.add("classname"); function.
+
+        target.classList.add("yellow")
+
+
+        // If we want to toggle a class (If its present, remove it or vice-versa), we use .classList.toggle("classname"); function.
+        
+        target.classList.toggle("red");
+
+        
+        // .classList.contains("classname"); function return [true] if a class is present in the element, else it returns [false].
+        
+        console.log(target.classList.contains("red"));
+
+    </script>
+</body>
+</html>
