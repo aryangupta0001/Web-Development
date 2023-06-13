@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SET TIME OUT AND SET INTERVAL</title>
+</head>
+<body>
+    <div class="container">
+        <h3>
+            setTimeout(func, time in ms) :-
+        </h3>
+
+        <p>
+            This function waits for some time (provided to it as argument) and then executes the function provided to it. This function also returns a unique ID.
+        </p>
+
+        <br><br>
+
+        <h3>
+            clearTimeout(Timeout Unique ID) :-
+        </h3>
+
+        <p>
+            This function clears the timout asscoiated with the unique ID.
+        </p>
+
+        <br><br>
+
+        <h3>
+            setInterval(func, time in ms) :-
+        </h3>
+
+        <p>
+            This function repeats the function (provided to it as argument) after a fixed intervall of time (provided to it as argument). This function also returns a unique ID.
+        </p>
+
+        <br><br>
+
+        <h3>
+            clearInterval(Interval Unique ID) :-
+        </h3>
+
+        <p>
+            This function interval asscoiated with the unique ID.
+        </p>
+    </div>
+
+    <script>
+
+
+        /*
+
+        function greet1(){
+            alert("I am in a Timeout");
+
+        }
+
+        function greet2(){
+            alert("I am in a Interval");
+        }
+
+        greet1();
+
+        setTimeout(greet1, 10000);                       // setTimeout function will run the greet1 function after 10000 ms (10 seconds).
+        let timeId = setTimeout(greet1, 10000);          // setTimeout also returns a unique id of itself.
+
+        let choice = prompt("Stop Timeout (Y/N)");
+
+        if (choice.toUpperCase == "Y"){
+            clearTimeout(timeId);                           // clearTimeout is used to stop the execution of the setTimeout function by using unique id.
+        }
+
+
+
+        setInterval(greet2, 10000);                      // setInterval function will run the greet2 function every 10000 ms (10 seconds).
+        intervalId = setInterval(greet2, 10000);         // setInterval also returns a unique id of itself.
+        
+
+        choice = prompt("Stop Interval (Y/N)");
+
+        if(choice.toUpperCase == "Y"){
+            clearInterval(intervalId);                      // clearInterval is used to stop the execution of the setInterval function by using unique id.
+        }
+
+        */
+
+
+        // We can also provide addittional arguments to the setTimeout function :-
+
+        function sum(a, b, c){
+            console.log(" The sum is : ", a + b + c);
+        }
+
+        function product(a, b, c){
+            console.log(" The product is : ", a * b * c);
+        }
+
+        setTimeout(sum, 1500, 1, 2, 3);
+        setInterval(product, 1600, 1, 2, 3);
+
+        // These arguments can be used inside the 
+        // 
+
+    </script>
+</body>
+</html>
