@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listner</title>
+</head>
+<body>
+    <div class="box" id="div1">
+        <button>
+            Click Me
+        </button>
+    </div>
+
+    <script>
+
+        function btn_click(event){
+            alert("You clicked the button");
+            console.log(event.type);
+            console.log(event.currentTarget);
+            console.log("You clicked at cordinates --> X : " + event.clientX + ", Y : " + event.clientY)
+        }
+        
+        function r_btn_click(){
+            alert("You clicked the right button");
+        }
+        
+        function mouse_up(){
+            alert("Mouse up");
+            console.log(event.currentTarget);
+        }
+
+        function dbl_click(){
+            alert("Double Click");
+            console.log(event.currentTarget);
+        }
+        
+        let target1 = document.body.getElementsByClassName("box")[0]
+        let target2 = target1 .getElementsByTagName("button")[0]
+        
+
+        target2.addEventListener("click", btn_click);
+        target2.addEventListener("contextmenu", r_btn_click);        
+        
+        target.removeEventListener("click", btn_click);
+
+
+        target1.addEventListener("mouseover", mouse_up)
+
+
+        // Bubbling & Capturing :-
+
+        // If same event EventListener is added to parent & its children elements, then the order of execution of the events is specified by a 3rd argument in the .addEventListener function. [true] or [false] is provided as 3rd argument. This argument is optional and is taken as [false] by-default.
+
+        //  Bubbling means the execution starts from inner-most element, which have the same EventListener to the outer-most element.
+        // Capturing is vice-versa of Bubbling
+
+        // Here the [false] is used for Bubbling & [true] for capturing.
+
+        target1.addEventListener("dblclick", dbl_click, true);
+        target2.addEventListener("dblclick", dbl_click, true);
+
+
+    </script>
+</body>
+</html>
