@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    
+
+    <script>
+        let p1 = new Promise((resolve, reject) => {
+            alert("Alert !!! It's inside a promise");
+            
+            setTimeout(() => {
+                resolve(true);
+            }, 5000);
+        });
+
+
+
+        let p2 = new Promise((resolve, reject) => {
+            alert("Alert !!! It's inside a promise");
+            
+            setTimeout(() => {
+                reject(new Error("Promise failed"));
+            }, 5000);
+        });
+
+
+        p1.then((value) => {
+            console.log("P1 executed resolved with value : ", value);
+        })
+
+        p1.catch((error) => {
+            console.log("P1 executed rejected with error : ", error);
+        })
+
+        p2.catch((error) => {
+            console.log("P2 executed rejected with error : ", error);
+        })
+
+        // p2.then((value) => {
+        //     console.log("P2 executed resolved with value : ", value);
+        // })    
+
+
+    </script>
+</body>
+</html>
