@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callbacks</title>
+</head>
+<body>
+    
+
+    <script>
+
+
+        /*
+        function addScript(scriptSource){
+            let script = document.createElement("script");
+            script.src = scriptSource;
+            document.body.appendChild(script);
+            
+            script.onload = function(){                                     // This function wll get executed as soon as the scripts loads.
+                console.log("Script Loaded");
+            }
+        }
+
+
+
+        function addScript(scriptSource, callback = ()=> {                  // Here we are providing a callback function as argument, we are also defining the function at the time of passing..
+            console.log("script loaded");
+        }){
+            let script = document.createElement("script");
+            script.src = scriptSource;
+            document.body.appendChild(script);
+
+            callback();     
+        }
+
+
+
+        // function addScript(scriptSource){
+        //     let script = document.createElement("script");
+        //     script.src = scriptSource;
+        //     document.body.appendChild(script);
+            
+        //     callback();                                                  // Here we are calling the callback funciton defined outside the function.
+        // }
+        
+        // function callback(){
+        //     console.log("script loaded");
+
+        // }
+
+
+        addScript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js");
+        
+        */
+
+
+
+        function addScript(scriptSource){
+            let script = document.createElement("script");
+            script.src = scriptSource;
+            document.body.appendChild(script);
+
+            script.onload = function(){
+                callback(null);
+            }
+
+            script.onerror = function(){
+                callback(new Error("Src"));
+            }
+        }
+        
+        function callback(error){
+            if (error){
+                console.log("Script Loading failed :-" + error);
+            }
+            
+            else{
+                console.log("Script loaded");
+            }
+        }
+
+
+        // addScript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js");          // Incorrect URL to produce error.
+        addScript("https://cdn.jivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js");          // Incorrect URL to produce error.
+
+
+    </script>
+</body>
+</html>
